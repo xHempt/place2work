@@ -1,0 +1,133 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --max-width: 1250px;
+  --header-hgt: 10vh;
+  --color-bg: #4a637c;
+  --color-primary: #5c8e95;
+  --color-secondary: #d8974e;
+  --color-accent: #c18c5d;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  background-color: #345;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Header styles */
+
+header {
+  width: 100%;
+  min-height: var(--header-hgt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav {
+  width: 90%;
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search--wrapper {
+  flex-grow: 1;
+  padding: 0 3em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.search--wrapper input {
+  font-family: "Work Sans", sans-serif;
+  flex-grow: 1;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding: 0.5em;
+  color: #fff;
+}
+
+.search--wrapper input:focus {
+  outline: none;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+
+.sign-up--button {
+  background-color: #9c7d5d;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  transition: background 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.sign-up--button:hover,
+.sign-up--button:focus {
+  background-color: #b1967b;
+}
+
+/* Main content */
+
+main {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.posts--wrapper {
+  width: 100%;
+  padding: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post--wrapper {
+  flex: 1 1 50%;
+  padding: 0.5em;
+}
+
+.post {
+  padding: 1em 1.5em;
+  overflow-wrap: break-word;
+  border-radius: 1em;
+}
+
+.post--headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+}
+
+.post--headline h2 {
+  line-height: 1;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+}
